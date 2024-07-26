@@ -1,2 +1,1 @@
-body = d3.select('body');
-body.append('rect').style('fill', 'red');
+d3.select('p');
