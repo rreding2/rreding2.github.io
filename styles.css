@@ -1,0 +1,66 @@
+.us {
+  color: #000000ff;
+}
+.canada {
+  color: #aa0000;
+}
+.male {
+  color: #00dbf8ff;
+}
+.female {
+  color: #f0f0f0ff;
+}
+.a05-14 {
+  color: #f0f0f0ff;
+}
+.a15-24 {
+  color: #c8c8c8ff;
+}
+.a25-34 {
+  color: #a0a0a0ff;
+}
+.a35-54 {
+  color: #787878ff;
+}
+.a55-74 {
+  color: #505050ff;
+}
+.a75-99 {
+  color: #282828ff;
+}
+.a05-14-male {
+  color: #00dbf8ff;
+}
+.a15-24-male {
+  color: #00b7cfff;
+}
+.a25-34-male {
+  color: #0092a5ff;
+}
+.a35-54-male {
+  color: #006e7cff;
+}
+.a55-74-male {
+  color: #004953ff;
+}
+.a75-99-male {
+  color: #002529ff;
+}
+.a05-14-female {
+  color: #f0f0f0ff;
+}
+.a15-24-female {
+  color: #c8c8c8ff;
+}
+.a25-34-female {
+  color: #a0a0a0ff;
+}
+.a35-54-female {
+  color: #787878ff;
+}
+.a55-74-female {
+  color: #505050ff;
+}
+.a75-99-female {
+  color: #282828ff;
+}
