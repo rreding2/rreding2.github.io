@@ -8,30 +8,65 @@
     <script src="https://d3js.org/d3.v7.js"></script>
   </head>
   <body>
-    <div>
-      <h1>WHAT US POPULATION SEGMENTS ARE MOST AT RISK OF SUICIDE?</h1>
-      <p>
-        Let's discover the answer by reviewing suicides per 100,000 people,
-        slicing the data by:
-      </p>
-      <ol>
-        <li><b>Time</b>: Are US suicides increasing over time?</li>
-        <li>
-          <b>Country:</b>: Are people in the US more at risk than those in
-          Canada?
-        </li>
-        <li><b>Sex:</b> Are US men or women more at risk of suicide?</li>
-        <li>
-          <b>Age Group:</b> Which US age groups are most at risk of suicide?
-        </li>
-      </ol>
-      <p>
-        Then analyze the data by <b>Sex and Age Group</b> to decide for yourself
-        which segment of the US population is most at risk.
-      </p>
-      <br />
-      <p>Press Next to begin your discovery.</p>
-      <button onclick="window.location.href='time.html'">Next</button>
+    <div class="container">
+      <div class="header">
+        <h1>WHAT US POPULATION SEGMENTS ARE MOST AT RISK OF SUICIDE?</h1>
+      </div>
+      <div class="wrapper clearfix">
+        <div class="nav">
+          <ul>
+            <li><b>Introduction</b></li>
+            <li>Time</li>
+            <li>Country</li>
+            <li>Sex</li>
+            <li>Age Group</li>
+          </ul>
+        </div>
+        <div class="section">
+          <p>
+            Let's discover the answer by reviewing suicides per 100,000 people,
+            slicing the data by:
+          </p>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>1.</td>
+              <td><b>Time</b></td>
+              <td>Are US suicides increasing over time?</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>2.</td>
+              <td><b>Country</b></td>
+              <td>Are people in the US more at risk than those in Canada?</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>3.</td>
+              <td><b>Sex</b></td>
+              <td>Are US men or women more at risk of suicide?</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>4.</td>
+              <td><b>Age Group</b></td>
+              <td>Which US age groups are most at risk of suicide?</td>
+            </tr>
+          </table>
+
+          <p>
+            Then analyze the data by <b>Sex and Age Group</b> to decide for
+            yourself which segment of the US population is most at risk.
+          </p>
+          <p>Note: data is only available from 1985 to 2015.</p>
+          <br />
+
+          <p>Press <b>Next</b> below to begin your discovery.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <button onclick="window.location.href='time.html'">Next</button>
+      </div>
     </div>
   </body>
   <script src="main.js"></script>

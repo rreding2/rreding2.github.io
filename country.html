@@ -8,12 +8,29 @@
     <script src="https://d3js.org/d3.v7.js"></script>
   </head>
   <body>
-    <div>
-      <h1>ARE PEOPLE IN THE US MORE AT RISK THAN THOSE IN CANADA?</h1>
-
-      <br />
-      <button onclick="window.location.href='time.html'">Back</button>
-      <button onclick="window.location.href='sex.html'">Next</button>
+    <div class="container">
+      <div class="header">
+        <h1>ARE PEOPLE IN THE US MORE AT RISK THAN THOSE IN CANADA?</h1>
+      </div>
+      <div class="wrapper clearfix">
+        <div class="nav">
+          <ul>
+            <li>Introduction</li>
+            <li>Time</li>
+            <li><b>Country</b></li>
+            <li>Sex</li>
+            <li>Age Group</li>
+            <li>Sex and Age Group</li>
+          </ul>
+        </div>
+        <div class="section">
+          <div id="graph"></div>
+        </div>
+      </div>
+      <div class="footer">
+        <button onclick="window.location.href='time.html'">Back</button>
+        <button onclick="window.location.href='sex.html'">Next</button>
+      </div>
     </div>
   </body>
   <script src="country.js"></script>
