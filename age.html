@@ -6,12 +6,14 @@
     <title>Which US age groups are most at risk of suicide?</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="data.js"></script>
   </head>
-  <body>
+  <body onload="displayGraph()">
     <div class="container">
       <div class="header">
         <h1>WHICH AGE GROUPS ARE MOST AT RISK OF SUICIDE?</h1>
       </div>
+
       <div class="wrapper clearfix">
         <div class="nav">
           <ul>
@@ -22,11 +24,84 @@
             <li><b>Age Group</b></li>
             <li>Sex and Age Group</li>
           </ul>
+
+          <table>
+            <tr>
+              <td>
+                <input
+                  id="zoom"
+                  type="checkbox"
+                  class="checkbox"
+                  checked="checked"
+                  onchange="zoom(this)"
+                />
+              </td>
+              <td>
+                <div class="tooltip">
+                  Zoom
+                  <span class="tooltiptext"
+                    >When checked, the Y axis starts at the minimum value
+                    instead of zero.</span
+                  >
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="box legend-0514"></div>
+              </td>
+              <td>5-14</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="box legend-1524"></div>
+              </td>
+              <td>15-24</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="box legend-2534"></div>
+              </td>
+              <td>25-34</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="box legend-3554"></div>
+              </td>
+              <td>35-54</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="box legend-5574"></div>
+              </td>
+              <td>55-74</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="box legend-7599"></div>
+              </td>
+              <td>75+</td>
+            </tr>
+          </table>
         </div>
+
         <div class="section">
           <div id="graph"></div>
+          <div class="comments">
+            People aged 75 and older are at the highest risk of suicide.
+          </div>
         </div>
       </div>
+
       <div class="footer">
         <button onclick="window.location.href='sex.html'">Back</button>
         <button onclick="window.location.href='sex-age.html'">Next</button>

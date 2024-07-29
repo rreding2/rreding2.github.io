@@ -6,12 +6,14 @@
     <title>Are people in the US more at risk than those in Canada?</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="data.js"></script>
   </head>
-  <body>
+  <body onload="displayGraph()">
     <div class="container">
       <div class="header">
         <h1>ARE PEOPLE IN THE US MORE AT RISK THAN THOSE IN CANADA?</h1>
       </div>
+
       <div class="wrapper clearfix">
         <div class="nav">
           <ul>
@@ -22,11 +24,57 @@
             <li>Age Group</li>
             <li>Sex and Age Group</li>
           </ul>
+
+          <table>
+            <tr>
+              <td>
+                <input
+                  id="zoom"
+                  type="checkbox"
+                  class="checkbox"
+                  checked="checked"
+                  onchange="zoom(this)"
+                />
+              </td>
+              <td>
+                <div class="tooltip">
+                  Zoom
+                  <span class="tooltiptext"
+                    >When checked, the Y axis starts at the minimum value
+                    instead of zero.</span
+                  >
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="box legend-us"></div>
+              </td>
+              <td>US</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="box legend-canada"></div>
+              </td>
+              <td>Canada</td>
+            </tr>
+          </table>
         </div>
+
         <div class="section">
           <div id="graph"></div>
+          <div class="comments">
+            In contrast to the US, Canada's suicide rate has been steadily
+            declining for the last 30 years.
+          </div>
         </div>
       </div>
+
       <div class="footer">
         <button onclick="window.location.href='time.html'">Back</button>
         <button onclick="window.location.href='sex.html'">Next</button>

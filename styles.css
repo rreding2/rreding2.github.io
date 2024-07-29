@@ -26,11 +26,11 @@ body {
   box-sizing: border-box;
 }
 .nav {
-  width: 15%;
+  width: 16%;
   background: #d4d7dc;
 }
 .section {
-  width: 85%;
+  width: 84%;
 }
 .nav ul {
   list-style: none;
@@ -53,69 +53,114 @@ body {
   padding: 5px;
 }
 
-.us {
-  color: #000000ff;
+.comments {
+  text-align: center;
+  padding: 5px;
 }
-.canada {
-  color: #aa0000;
+
+.box {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  padding: 2px;
+  margin: 2px;
 }
-.male {
-  color: #00dbf8ff;
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px;
+  padding: 8px;
+  margin: 0px;
 }
-.female {
-  color: #f0f0f0ff;
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
-.a05-14 {
-  color: #f0f0f0ff;
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
 }
-.a15-24 {
-  color: #c8c8c8ff;
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
-.a25-34 {
-  color: #a0a0a0ff;
+
+.legend-us {
+  background-color: #000000ff;
 }
-.a35-54 {
-  color: #787878ff;
+.legend-canada {
+  background-color: #aa0000;
 }
-.a55-74 {
-  color: #505050ff;
+.legend-male {
+  background-color: #00daf7ff;
 }
-.a75-99 {
-  color: #282828ff;
+.legend-female {
+  background-color: #f7ce00ff;
 }
-.a05-14-male {
-  color: #00dbf8ff;
+.legend-0514 {
+  background-color: #f0f0f0ff;
 }
-.a15-24-male {
-  color: #00b7cfff;
+.legend-1524 {
+  background-color: #c8c8c8ff;
 }
-.a25-34-male {
-  color: #0092a5ff;
+.legend-2534 {
+  background-color: #a0a0a0ff;
 }
-.a35-54-male {
-  color: #006e7cff;
+.legend-3554 {
+  background-color: #787878ff;
 }
-.a55-74-male {
-  color: #004953ff;
+.legend-5574 {
+  background-color: #505050ff;
 }
-.a75-99-male {
-  color: #002529ff;
+.legend-7599 {
+  background-color: #282828ff;
 }
-.a05-14-female {
-  color: #f0f0f0ff;
+.legend-0514male {
+  background-color: #00daf7ff;
 }
-.a15-24-female {
-  color: #c8c8c8ff;
+.legend-1524male {
+  background-color: #00bfd8ff;
 }
-.a25-34-female {
-  color: #a0a0a0ff;
+.legend-2534male {
+  background-color: #00a4b9ff;
 }
-.a35-54-female {
-  color: #787878ff;
+.legend-3554male {
+  background-color: #00889aff;
 }
-.a55-74-female {
-  color: #505050ff;
+.legend-5574male {
+  background-color: #006d7cff;
 }
-.a75-99-female {
-  color: #282828ff;
+.legend-7599male {
+  background-color: #00525dff;
+}
+.legend-0514female {
+  background-color: #f7ce00ff;
+}
+.legend-1524female {
+  background-color: #d8b400ff;
+}
+.legend-2534female {
+  background-color: #b99b00ff;
+}
+.legend-3554female {
+  background-color: #9a8100ff;
+}
+.legend-5574female {
+  background-color: #7c6700ff;
+}
+.legend-7599female {
+  background-color: #5d4d00ff;
 }

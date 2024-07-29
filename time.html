@@ -8,7 +8,7 @@
     <script src="https://d3js.org/d3.v7.js"></script>
     <script src="data.js"></script>
   </head>
-  <body>
+  <body onload="displayGraph()">
     <div class="container">
       <div class="header">
         <h1>ARE US SUICIDES INCREASING OVER TIME?</h1>
@@ -23,11 +23,50 @@
             <li>Age Group</li>
             <li>Sex and Age Group</li>
           </ul>
+
+          <table>
+            <tr>
+              <td>
+                <input
+                  id="zoom"
+                  type="checkbox"
+                  class="checkbox"
+                  checked="checked"
+                  onchange="zoom(this)"
+                />
+              </td>
+              <td>
+                <div class="tooltip">
+                  Zoom
+                  <span class="tooltiptext"
+                    >When checked, the Y axis starts at the minimum value
+                    instead of zero.</span
+                  >
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="box legend-us"></div>
+              </td>
+              <td>US</td>
+            </tr>
+          </table>
         </div>
+
         <div class="section">
           <div id="graph"></div>
+          <div class="comments">
+            The suicide rate has increased over the last 10 years.
+          </div>
         </div>
       </div>
+
       <div class="footer">
         <button onclick="window.location.href='index.html'">Back</button>
         <button onclick="window.location.href='country.html'">Next</button>

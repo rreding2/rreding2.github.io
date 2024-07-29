@@ -6,12 +6,14 @@
     <title>Are US men or women more at risk of suicide?</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="data.js"></script>
   </head>
-  <body>
+  <body onload="displayGraph()">
     <div class="container">
       <div class="header">
         <h1>ARE US MEN OR WOMEN MORE AT RISK OF SUICIDE?</h1>
       </div>
+
       <div class="wrapper clearfix">
         <div class="nav">
           <ul>
@@ -22,11 +24,55 @@
             <li>Age Group</li>
             <li>Sex and Age Group</li>
           </ul>
+          <table>
+            <tr>
+              <td>
+                <input
+                  id="zoom"
+                  type="checkbox"
+                  class="checkbox"
+                  checked="checked"
+                  onchange="zoom(this)"
+                />
+              </td>
+              <td>
+                <div class="tooltip">
+                  Zoom
+                  <span class="tooltiptext"
+                    >When checked, the Y axis starts at the minimum value
+                    instead of zero.</span
+                  >
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="box legend-male"></div>
+              </td>
+              <td>Male</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="box legend-female"></div>
+              </td>
+              <td>Female</td>
+            </tr>
+          </table>
         </div>
+
         <div class="section">
           <div id="graph"></div>
+          <div class="comments">
+            Men are over 5 times at risk of suicide than women.
+          </div>
         </div>
       </div>
+
       <div class="footer">
         <button onclick="window.location.href='country.html'">Back</button>
         <button onclick="window.location.href='age.html'">Next</button>

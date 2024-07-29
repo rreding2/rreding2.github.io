@@ -6,12 +6,15 @@
     <title>Which US population segment is most at risk?</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="data.js"></script>
   </head>
-  <body>
+
+  <body onload="displayGraph()">
     <div class="container">
       <div class="header">
         <h1>WHICH US POPULATION SEGMENT IS MOST AT RISK?</h1>
       </div>
+  
       <div class="wrapper clearfix">
         <div class="nav">
           <ul>
@@ -22,11 +25,200 @@
             <li>Age Group</li>
             <li><b>Sex and Age Group</b></li>
           </ul>
+
+
+          <table>
+            <tr>
+              <td >
+                <input
+                  id="zoom"
+                  type="checkbox"
+                  class="checkbox"
+                  checked="checked"
+                  onchange="zoom(this)"
+                />
+              </td>
+              <td>
+                <div class="tooltip">Zoom
+                  <span class="tooltiptext">When checked, the Y axis starts at the minimum value instead of zero.</span>
+                </div>
+      </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+              <td>
+                &nbsp;M
+              </td>
+              <td>
+                &nbsp;
+              </td>
+              <td >&nbsp;F</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c0514male(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-0514male"></div>
+              </td>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c0514female(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-0514female"></div>
+              </td>
+              <td>5-14</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c1524male(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-1524male"></div>
+              </td>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c1524female(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-1524female"></div>
+              </td>
+              <td>15-24</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input
+                type="checkbox"
+                checked="checked"
+                class="checkbox"
+                onchange="c2534male(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-2534male"></div>
+              </td>
+              <td>
+                <input
+                type="checkbox"
+                checked="checked"
+                class="checkbox"
+                onchange="c2534female(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-2534female"></div>
+              </td>
+              <td>25-34</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c3554male(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-3554male"></div>
+              </td>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c3554female(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-3554female"></div>
+              </td>
+              <td>35-54</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c5574male(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-5574male"></div>
+              </td>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c5574female(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-5574female"></div>
+              </td>
+              <td>55-74</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c7599male(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-7599male"></div>
+              </td>
+              <td>
+                <input
+                type="checkbox"
+                class="checkbox"
+                onchange="c7599female(this)"
+              />
+              </td>
+              <td>
+                <div class="box legend-7599female"></div>
+              </td>
+              <td>75+</td>
+            </tr>
+          </table>
+
         </div>
+  
         <div class="section">
           <div id="graph"></div>
+          <div class="comments">
+            Toggle the age group / sex check boxes to view the data. See which population segment you think is most at risk.
+          </div>
         </div>
       </div>
+  
       <div class="footer">
         <button onclick="window.location.href='age.html'">Back</button>
         <button onclick="window.location.href='index.html'">Introduction</button>
