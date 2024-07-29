@@ -65,7 +65,7 @@ function displayGraph() {
     .append('path')
     .datum(male)
     .attr('fill', 'none')
-    .attr('stroke', 'black')
+    .attr('stroke', '#00DAF7ff')
     .attr('stroke-width', '2');
 
   let lineMale = d3
@@ -80,7 +80,7 @@ function displayGraph() {
     .append('path')
     .datum(female)
     .attr('fill', 'none')
-    .attr('stroke', '#aa0000')
+    .attr('stroke', '#F7CE00ff')
     .attr('stroke-width', '2');
 
   let lineFemale = d3
