@@ -1,3 +1,10 @@
+d3.select('body')
+  .select('div')
+  .style('opacity', 0)
+  .transition()
+  .duration(1000)
+  .style('opacity', 1);
+
 let margin = { top: 10, right: 30, bottom: 30, left: 50 },
   width = 800 - margin.left - margin.right,
   height = 400 - margin.top - margin.bottom;
